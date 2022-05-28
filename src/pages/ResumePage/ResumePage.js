@@ -32,17 +32,35 @@ const Contacts = () => {
     </div>
   </div>)
 }
+
+const Skills = () => {
+  const list = ['React Native', 'GraphQL', 'Typescript', 'React.js', 'Javascript', 'Redux', 'API Integration', 'REST', 'Agile', 'iOS', 'Android', 'Data Structures', 'Algorithms', 'Math', 'Bitrise', 'Crashlytics', 'Unit Testing', 'RNTL', 'Jest', 'E2E Testing', 'Detox', 'CI/CD']
+  const Skill = ({ name }) => (
+    <div className="flex justify-center p-2 m-1 text-white text-xs bg-current rounded-md inline-block">
+      {name}
+    </div>)
+  return (<div className="mt-7">
+    <h2 className="text-2xl text-current font-bold">SKILLS</h2>
+    <div className="w-full border border-y-1 border-current mt-1"></div>
+    <div className="flex flex-wrap mt-3">
+      {list.map((sk) => <Skill key={sk} name={sk}/>)}
+    </div>
+  </div>)
+}
 const ResumePage = () => {
 
-  return (<div className="flex w-screen h-screen">
-    <div className="w-1/4 bg-red-600 flex justify-center">
-      <div className="bg-green-900 w-60 flex flex-col items-center">
-        <FaceImage></FaceImage>
+  return (<div className="flex mt-5 mx-2">
+    <div className="flex justify-center w-1/4 h-full">
+      <div className="flex flex-col w-60 items-start">
+        <div className="flex justify-center w-full">
+          <FaceImage></FaceImage>
+        </div>
         <Contacts></Contacts>
+        <Skills></Skills>
       </div>
 
     </div>
-    <div className="w-3/4 h-full bg-gray-300">3/4</div>
+    <div className="w-3/4  bg-gray-300">3/4</div>
 
   </div>)
 }
