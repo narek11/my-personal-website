@@ -2,6 +2,7 @@ import React from 'react'
 import { GrMail, GrLinkedin } from 'react-icons/gr'
 import { AiTwotonePhone } from 'react-icons/ai'
 import { BsStackOverflow } from 'react-icons/bs'
+import { IoIosSquareOutline } from 'react-icons/io'
 
 const FaceImage = () => {
   return (<img src={require('../../assets/narek-forest-small-volume.jpg')}
@@ -79,14 +80,12 @@ const Languages = () => {
 
 const Interests = () => {
   const list = ['Music', 'Hiking', 'Reading']
-  const Interest = ({ name }) => (
-    <div className="border border-1 border-gray-300 px-2 py-1 rounded-lg">{name}</div>
-  )
+  const Interest = ({ name }) => (<div className="border border-1 border-gray-300 px-2 py-1 rounded-lg">{name}</div>)
   return (<div className="mt-10">
     <h2 className="text-2xl text-current font-bold">INTERESTS</h2>
     <div className="w-full border border-y-1 border-current mt-1"></div>
     <div className="flex flex-wrap justify-start mt-3 space-x-2">
-      {list.map((name) => <Interest key={name} name={name} />)}
+      {list.map((name) => <Interest key={name} name={name}/>)}
     </div>
   </div>)
 }
@@ -103,12 +102,149 @@ const Left = () => (<div className="flex justify-center w-1/4 h-full">
   </div>
 </div>)
 
-const Right = () => (<div className="w-3/4  bg-green-300">
+const WorkExperience = () => {
+  const list = [
+    {
+      role: 'Senior React Native Engineer',
+      company: 'Modus Create, Inc.',
+      desc: 'The client was Verizon Communications Inc. The Android TV app is to view media backed from phone https://play.google.com/store/apps/details?id=com.vcast.mediamanager.tv&pli=1',
+      companyLocation: 'Reston, Virginia, USA',
+      startDate: '01/2021',
+      endDate: '04/2021',
+      responsibilities: ['Was responsible for delivering a complex pagination solution for Android TV', 'Fixing critical and complex bugs']
+    },
+    {
+      role: 'React Native Contractor',
+      company: 'Upstack Technologies, Inc.',
+      desc: '',
+      companyLocation: 'New York, USA',
+      startDate: '12/2019',
+      endDate: '12/2020',
+      responsibilities: [
+        'Have been engaged in few freelance projects',
+        'Got several Udemy courses/certificates and did an intensive study on algorithms and data structures',
+        'Aced Toptal and Turing interviews'
+      ]
+    },
+    {
+      role: 'React Native Engineer',
+      company: 'Spotlight Social.',
+      desc: 'Spotlight Social is a networking app staying in touch with communities https://spotlightsocial.app/://play.google.com/store/apps/details?id=com.vcast.mediamanager.tv&pli=1',
+      companyLocation: 'Somerset West, South Africa',
+      startDate: '08/2018',
+      endDate: '11/2019',
+      responsibilities: [
+        'Successfully Launched this big app in the iOS and Android stores',
+        'App quickly got 10,000 + downloads with positive reviews which helped to raise funding for further development of the app',
+        'Initiated and supervised specific feature suggestions and development'
+      ]
+    },
+    {
+      role: 'React Native Engineer',
+      company: 'GolfPlayed, Inc.',
+      desc: 'GolfPlayed is an app serving golfing communities to make your experience as easy and smooth as possible https://golfplayed.com/',
+      companyLocation: 'Somerset West, South Africa',
+      startDate: '12/2017',
+      endDate: '08/2018',
+      responsibilities: [
+        'Successfully led the company to launch the app and earn the trust of investors and onboard new happy investors. You can read about the company CEO review on my LinkedIn profile',
+        'Was quickly granted the role of Lead Developer in the project to organize and lead the mobile side of the project under pressure with Agile methodology',
+        'Identified and solved memory leaks, performance issues in the app which was causing huge user experience and usability issues'
+      ]
+    },
+    {
+      role: 'React Native Developer',
+      company: 'Blue Frog Software Pty Ltd.',
+      desc: 'This is an app to sell store products. The store items are managed by a separate web interface https://bluefrogsoftware.com.au/',
+      companyLocation: 'Melbourne, Australia',
+      startDate: '07/2017',
+      endDate: '11/2017',
+      responsibilities: [
+        'Successfully launched the app',
+        'Integrated payment gateway and started revenue generation',
+        'Identified and solved critical bugs for performance enhancements'
+      ]
+    },
+
+
+    {
+      role: 'Senior React Native Engineer',
+      company: 'Modus Create, Inc.',
+      desc: 'The client was Verizon Communications Inc. The Android TV app is to view media backed from phone https://play.google.com/store/apps/details?id=com.vcast.mediamanager.tv&pli=1',
+      companyLocation: 'Reston, Virginia, USA',
+      startDate: '01/2021',
+      endDate: '04/2021',
+      responsibilities: ['Was responsible for delivering a complex pagination solution for Android TV', 'Fixing critical and complex bugs']
+    }
+
+  ]
+  const Experience = ({ role, company, desc, companyLocation, startDate, endDate, responsibilities }) => {
+    return (
+      <div className='mx-5'>
+        <h1 className="text-current font-bold">{role}</h1>
+        <h2 className="text-black">{company}</h2>
+        <div className="flex justify-between text-current italic text-sm">
+          <div className="flex items-start mt-2">
+            <div>{startDate} - {endDate}</div>
+          </div>
+          <div>{companyLocation}</div>
+        </div>
+        <div className="text-gray-500 text-sm">{desc}</div>
+        <ul className="list-decimal space-y-1 mt-2">
+          {responsibilities.map((r) => (
+            <div className="flex items-center">
+              <IoIosSquareOutline size={10}/>
+              <div className="text-sm ml-1">{r}</div>
+            </div>
+          ))
+          }
+        </ul>
+      </div>
+    )
+  }
+  return (
+    <div className="mx-5 mt-6">
+      <h1 className="text-current font-extrabold text-2xl">WORK EXPERIENCE</h1>
+      <div className="w-full border border-y-1 border-current mt-1 border-"></div>
+
+      <div className="flex flex-col space-y-7 mt-2">
+        {list.map(exp => <Experience {...exp} />)}
+      </div>
+    </div>
+  )
+}
+const Certificates = () => {
+  return (<div className='mx-5 mt-6'>
+    <h1 className="text-current font-extrabold text-2xl">CERTIFICATES</h1>
+    <div className="w-full border border-y-1 border-current mt-1 border-"></div>
+    <div className="flex flex-col p-2">
+      <div className='text-black font-semibold'>React Native: Advanced Concepts</div>
+      <div className='text-gray-500 italic text-sm'>React Native certificate issued by Udemy</div>
+    </div>
+  </div>)
+}
+
+const Education = () => {
+  return (<div className='mx-5 mt-6'>
+    <h1 className="text-current font-extrabold text-2xl">EDUCATION</h1>
+    <div className="w-full border border-y-1 border-current mt-1 border-"></div>
+    <div className="flex flex-col p-2">
+      <div className='text-current font-bold text-lg'>Master's of Physics</div>
+      <div className='text-black  text-xl'>Yerevan State University</div>
+    </div>
+  </div>)
+}
+const Right = () => (<div className="w-3/4">
   <Summary></Summary>
+  <div>
+    <WorkExperience></WorkExperience>
+    <Certificates></Certificates>
+    <Education></Education>
+  </div>
 </div>)
 
 const ResumePage = () => {
-  return (<div className="flex mt-5 ml-2">
+  return (<div className="flex my-5 ml-2 ">
     <Left></Left>
     <Right></Right>
   </div>)
