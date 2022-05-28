@@ -11,7 +11,7 @@ const FaceImage = () => {
 }
 
 const Contacts = () => {
-  return (<div className="contacts-container flex flex-col items-start mt-5 bg-amber-600">
+  return (<div className="contacts-container flex flex-col items-start mt-5">
     <div className="my-2">
       <GrMail className="fill-current"/>
       <a href="mailto:nmusakhanyan@gmail.com" className="text-xs text-black">nmusakhanyan@gmail.com</a>
