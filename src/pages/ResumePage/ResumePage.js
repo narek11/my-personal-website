@@ -47,9 +47,23 @@ const Skills = () => {
     </div>
   </div>)
 }
-const ResumePage = () => {
 
-  return (<div className="flex mt-5 mx-2">
+const Summary = () => {
+  return (<div className="flex flex-col bg-current p-4">
+      <div className="text-white text-4xl">Narek Musakhanyan</div>
+      <div className="text-white text-xl mt-2">Senior Mobile Engineer (React Native)</div>
+      <div className="border border-y-10 border-white w-80 mt-2"></div>
+      <div className="text-white text-sm mt-3">
+        A Senior React Native Engineer with 6 years of experience in mobile and over 12 years of JavaScript development
+        experience in the provision of
+        high-quality cross-platform app engineering solutions. Experienced in every single step of app development and
+        delivery.
+      </div>
+    </div>)
+}
+
+const ResumePage = () => {
+  return (<div className="flex mt-5 ml-2">
     <div className="flex justify-center w-1/4 h-full">
       <div className="flex flex-col w-60 items-start">
         <div className="flex justify-center w-full">
@@ -58,9 +72,10 @@ const ResumePage = () => {
         <Contacts></Contacts>
         <Skills></Skills>
       </div>
-
     </div>
-    <div className="w-3/4  bg-gray-300">3/4</div>
+    <div className="w-3/4  bg-green-300">
+      <Summary></Summary>
+    </div>
 
   </div>)
 }
