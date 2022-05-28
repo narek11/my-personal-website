@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.95fba3ea.css",
+    "main.js": "/static/js/main.555bd816.js",
+    "static/js/787.f8a0dea2.chunk.js": "/static/js/787.f8a0dea2.chunk.js",
+    "static/media/narek-forest-small-volume.jpg": "/static/media/narek-forest-small-volume.8056613a7ffaf1d45455.jpg",
+    "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/index.html",
+    "main.95fba3ea.css.map": "/static/css/main.95fba3ea.css.map",
+    "main.555bd816.js.map": "/static/js/main.555bd816.js.map",
+    "787.f8a0dea2.chunk.js.map": "/static/js/787.f8a0dea2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.95fba3ea.css",
+    "static/js/main.555bd816.js"
+  ]
+}
