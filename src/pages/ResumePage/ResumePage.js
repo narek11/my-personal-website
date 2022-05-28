@@ -62,6 +62,35 @@ const Summary = () => {
   </div>)
 }
 
+const Languages = () => {
+  return (<div className="mt-10">
+    <h2 className="text-2xl text-current font-bold">LANGUAGES</h2>
+    <div className="w-full border border-y-1 border-current mt-1"></div>
+    <div className="flex flex-col mt-3">
+      <div className="text-black text-sm font-medium">English</div>
+      <div className="text-current italic">Native or Bilingual Proficiency</div>
+    </div>
+    <div className="flex flex-col mt-3">
+      <div className="text-black text-sm font-medium">Armenian</div>
+      <div className="text-current italic">Native or Bilingual Proficiency</div>
+    </div>
+  </div>)
+}
+
+const Interests = () => {
+  const list = ['Music', 'Hiking', 'Reading']
+  const Interest = ({ name }) => (
+    <div className="border border-1 border-gray-300 px-2 py-1 rounded-lg">{name}</div>
+  )
+  return (<div className="mt-10">
+    <h2 className="text-2xl text-current font-bold">INTERESTS</h2>
+    <div className="w-full border border-y-1 border-current mt-1"></div>
+    <div className="flex flex-wrap justify-start mt-3 space-x-2">
+      {list.map((name) => <Interest key={name} name={name} />)}
+    </div>
+  </div>)
+}
+
 const Left = () => (<div className="flex justify-center w-1/4 h-full">
   <div className="flex flex-col w-60 items-start">
     <div className="flex justify-center w-full">
@@ -69,6 +98,8 @@ const Left = () => (<div className="flex justify-center w-1/4 h-full">
     </div>
     <Contacts></Contacts>
     <Skills></Skills>
+    <Languages></Languages>
+    <Interests></Interests>
   </div>
 </div>)
 
